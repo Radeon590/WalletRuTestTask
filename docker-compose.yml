@@ -1,0 +1,6 @@
+﻿services:
+  walletrutesttask:
+    image: walletrutesttask
+    build:
+      context: .
+      dockerfile: WalletRuTestTask/Dockerfile
