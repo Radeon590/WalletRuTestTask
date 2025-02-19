@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletRuTestTask", "WalletRuTestTask\WalletRuTestTask.csproj", "{F93117F6-A0EF-4FBB-9052-82D42055A4EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletRuTestTaskApi", "WalletRuTestTaskApi\WalletRuTestTaskApi.csproj", "{F93117F6-A0EF-4FBB-9052-82D42055A4EF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B703D002-B3E7-40C0-93E0-BC33BCFB344E}"
 	ProjectSection(SolutionItems) = preProject
