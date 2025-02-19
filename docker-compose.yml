@@ -3,4 +3,10 @@
     image: walletrutesttask
     build:
       context: .
-      dockerfile: WalletRuTestTask/Dockerfile
+      dockerfile: WalletRuTestTask.Api/Dockerfile
+
+  walletrutesttask.messager:
+    image: walletrutesttask.messager
+    build:
+      context: .
+      dockerfile: WalletRuTestTask.Messager/Dockerfile

@@ -1,4 +1,4 @@
-﻿namespace WalletRuTestTaskApi.Services.DbService.NpSql;
+﻿namespace WalletRuTestTask.Api.Services.DbService.NpSql;
 
 public static class NpSqlDbServiceConfigurator
 {

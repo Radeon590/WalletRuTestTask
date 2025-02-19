@@ -1,5 +1,5 @@
-using WalletRuTestTaskApi.Services;
-using WalletRuTestTaskApi.Services.DbService.NpSql;
+using WalletRuTestTask.Api.Services;
+using WalletRuTestTask.Api.Services.DbService.NpSql;
 
 var builder = WebApplication.CreateBuilder(args);
 

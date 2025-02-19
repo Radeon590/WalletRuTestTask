@@ -1,9 +1,9 @@
 ﻿using System.Net.WebSockets;
 using System.Text;
 using Newtonsoft.Json;
-using WalletRuTestTaskApi.Entities;
+using WalletRuTestTask.Api.Entities;
 
-namespace WalletRuTestTaskApi.Services;
+namespace WalletRuTestTask.Api.Services;
 
 public class WebSocketsHandler
 {

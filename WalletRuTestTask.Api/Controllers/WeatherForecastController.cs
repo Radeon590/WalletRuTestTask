@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WalletRuTestTaskApi.Controllers;
+namespace WalletRuTestTask.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]

@@ -1,4 +1,4 @@
-namespace WalletRuTestTaskApi;
+namespace WalletRuTestTask.Api;
 
 public class WeatherForecast
 {

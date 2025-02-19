@@ -1,4 +1,4 @@
-﻿namespace WalletRuTestTaskApi.Entities;
+﻿namespace WalletRuTestTask.Api.Entities;
 
 public class Message
 {

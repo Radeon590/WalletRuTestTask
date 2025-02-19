@@ -21,4 +21,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\WalletRuTestTask.Shared\WalletRuTestTask.Shared.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Text;
 using Npgsql;
 
-namespace WalletRuTestTaskApi.Services.DbService.NpSql;
+namespace WalletRuTestTask.Api.Services.DbService.NpSql;
 
 public class NpSqlDbService
 {

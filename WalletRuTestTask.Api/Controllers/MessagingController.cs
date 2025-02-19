@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WalletRuTestTaskApi.Entities;
-using WalletRuTestTaskApi.Services;
-using WalletRuTestTaskApi.Services.DbService.NpSql;
+using WalletRuTestTask.Api.Entities;
+using WalletRuTestTask.Api.Services;
+using WalletRuTestTask.Api.Services.DbService.NpSql;
 
-namespace WalletRuTestTaskApi.Controllers
+namespace WalletRuTestTask.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
