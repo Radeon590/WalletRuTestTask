@@ -2,8 +2,8 @@
 
 public class Message
 {
-    public string Content;
-    public DateTime DateTime;
+    public string Content { get; set; }
+    public DateTime DateTime { get; set; }
 
     public Message()
     {

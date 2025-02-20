@@ -29,7 +29,7 @@ namespace WalletRuTestTask.Api.Controllers
             try
             {
                 var newMessage = new Message(content, DateTime.Now);
-                await _npSqlDbService.Add(MessagesTableName, newMessage);
+                await _npSqlDbService.AddAsync(MessagesTableName, newMessage);
                 await _webSocketsHandler.BroadcastMessageAsync(newMessage);
                 _logger.LogInformation("Received message {Content} in {DateTimeNow}", content, DateTime.Now);
                 // не думаю, что здесь нужно делать лог, если бы это был сервис для обмена сообщениями между пользователями.

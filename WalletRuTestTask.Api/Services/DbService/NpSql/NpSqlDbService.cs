@@ -42,32 +42,78 @@ public class NpSqlDbService
         }
     }
     
-    public async Task Add<T>(string tableName, T newElement)
+    public async Task AddAsync<T>(string tableName, T newElement)
     {
-        Type type = typeof(T);
-        PropertyInfo[] properties = type.GetProperties();
+        tableName = tableName.ToLower();
+        await EnsureTableExistsAsync<T>(tableName);
+        await InsertDataAsync(tableName, newElement);
+    }
 
-        // column names and parameter names
-        string[] columns = properties.Select(p => p.Name).ToArray();
-        string[] paramNames = properties.Select(p => "@" + p.Name).ToArray();
+    private async Task EnsureTableExistsAsync<T>(string tableName)
+    {
+        var checkTableQuery = "SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = @tableName);";
 
-        // query
-        string query = $"INSERT INTO {tableName} ({string.Join(", ", columns)}) VALUES ({string.Join(", ", paramNames)})";
+        using var checkCmd = new NpgsqlCommand(checkTableQuery, _npgsqlConnection);
+        checkCmd.Parameters.AddWithValue("@tableName", tableName);
+        bool tableExists = (bool)await checkCmd.ExecuteScalarAsync();
 
-        // parameters
-        List<NpgsqlParameter> parameters = new List<NpgsqlParameter>();
-        foreach (PropertyInfo prop in properties)
+        if (!tableExists)
         {
-            object value = prop.GetValue(newElement) ?? DBNull.Value; // Handle null values
-            parameters.Add(new NpgsqlParameter("@" + prop.Name, value));
+            Console.WriteLine($"Creating table: {tableName}");
+            string createTableQuery = GenerateCreateTableQuery<T>(tableName);
+            using var createCmd = new NpgsqlCommand(createTableQuery, _npgsqlConnection);
+            await createCmd.ExecuteNonQueryAsync();
+        }
+    }
+
+    private string GenerateCreateTableQuery<T>(string tableName)
+    {
+        var properties = typeof(T).GetProperties();
+        StringBuilder query = new StringBuilder($"CREATE TABLE {tableName} (id SERIAL PRIMARY KEY, ");
+
+        foreach (var prop in properties)
+        {
+            string columnType = prop.PropertyType switch
+            {
+                Type t when t == typeof(int) => "INTEGER",
+                Type t when t == typeof(string) => "TEXT",
+                Type t when t == typeof(bool) => "BOOLEAN",
+                Type t when t == typeof(DateTime) => "TIMESTAMP",
+                _ => "TEXT"
+            };
+
+            query.Append($"{prop.Name} {columnType}, ");
         }
 
-        // request
-        await ExecuteNonQuery(query, parameters.ToArray());
+        query.Length -= 2; // Remove last comma
+        query.Append(");");
+
+        return query.ToString();
+    }
+
+    private async Task InsertDataAsync<T>(string tableName, T newElement)
+    {
+        var properties = typeof(T).GetProperties();
+        var columnNames = string.Join(", ", properties.Select(p => p.Name));
+        var parameterNames = string.Join(", ", properties.Select(p => $"@{p.Name}"));
+
+        string insertQuery = $"INSERT INTO {tableName} ({columnNames}) VALUES ({parameterNames});";
+
+        using var cmd = new NpgsqlCommand(insertQuery, _npgsqlConnection);
+
+        foreach (var prop in properties)
+        {
+            object value = prop.GetValue(newElement) ?? DBNull.Value;
+            cmd.Parameters.AddWithValue($"@{prop.Name}", value);
+        }
+
+        await cmd.ExecuteNonQueryAsync();
     }
     
     public List<T> Get<T>(string tableName, Dictionary<string, (string Operator, object Value)> filters = null) where T : new()
     {
+        tableName = tableName.ToLower();
+        
         // query
         StringBuilder queryBuilder = new StringBuilder($"SELECT * FROM {tableName}");
 

@@ -12,22 +12,9 @@
   <component name="ChangeListManager">
     <list default="true" id="88988258-23af-4aa0-b846-198194493e61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WalletRuTestTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WalletRuTestTask/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTask.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/Controllers/MessagingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/Controllers/MessagingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/Controllers/WeatherForecastController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/Entities/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Shared/Entities/Message.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/Services/DbService/NpSql/NpSqlDbService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/Services/DbService/NpSql/NpSqlDbService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/Services/DbService/NpSql/NpSqlDbServiceConfigurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/Services/DbService/NpSql/NpSqlDbServiceConfigurator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/Services/WebSocketsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/Services/WebSocketsHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/WalletRuTestTask.http" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/WalletRuTestTask.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/WalletRuTestTaskApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/WalletRuTestTask.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/WeatherForecast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/WeatherForecast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletRuTestTaskApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletRuTestTask.Api/Controllers/MessagingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/Controllers/MessagingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletRuTestTask.Api/Services/DbService/NpSql/NpSqlDbService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Api/Services/DbService/NpSql/NpSqlDbService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletRuTestTask.Shared/Entities/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WalletRuTestTask.Shared/Entities/Message.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,21 +40,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.WalletRuTestTask: http.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.WalletRuTestTask: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.WalletRuTestTask.Messager.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Multi-Launch.Unnamed">
     <configuration name="WalletRuTestTask.Messager" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -239,7 +227,8 @@
       <updated>1739890563747</updated>
       <workItem from="1739890564809" duration="12602000" />
       <workItem from="1739994567535" duration="1298000" />
-      <workItem from="1739996741892" duration="3845000" />
+      <workItem from="1739996741892" duration="4526000" />
+      <workItem from="1740086587448" duration="1514000" />
     </task>
     <servers />
   </component>
